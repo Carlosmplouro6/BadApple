@@ -76,8 +76,7 @@ li a {
   display: flex;
   flex-direction: column;
   background-color: rgb(34, 34, 34);
-  height: 40vh;
-  width: 15vw;
+  padding: 2rem 2rem;
   color: rgb(230, 27, 27);
   align-items: center;
   justify-content: space-evenly;
@@ -94,7 +93,19 @@ li a {
 }
 
 .fButton {
+  margin-top: 1rem;
   background-color: rgb(230, 27, 27);
+}
+
+.createSection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hidden {
