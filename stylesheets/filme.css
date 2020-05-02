@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-red-color: rgb(187, 42, 42);
+  --header-bg-color: #202125;
+  --cat-bg-color: #363740;
+  --film-bg-color: #f7f8fc;
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+}
+
+.header {
+  height: 7vh;
+  background-color: var(--header-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  margin-left: 1rem;
+  font-size: 40px;
+  width: 4rem;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin-right: 1rem;
+}
+
+li {
+  margin-right: 2rem;
+}
+li a {
+  text-decoration: none;
+  color: var(--film-bg-color);
+  font-size: 2rem;
+}
+
+.container {
+  background-color: var(--cat-bg-color);
+  width: 100vw;
+  height: 93vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filmContainer {
+  background-color: var(--film-bg-color);
+  display: flex;
+  width: 80vw;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.title {
+  font-size: 4rem;
+}
+
+.description {
+  margin-top: -8rem;
+  font-size: 1.5rem;
+}
+
+.linksContainer {
+  display: flex;
+  width: inherit;
+}
+
+.rating {
+  font-size: 3rem;
+  margin-right: 6rem;
+}
+
+.youtubeLink {
+  width: 3rem;
+}
+
+.countryFlag {
+  margin-left: 6rem;
+  width: 5rem;
+}
+
+.hativo {
+  color: var(--main-red-color);
+  text-decoration: var(--main-red-color) underline;
+}

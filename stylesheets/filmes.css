@@ -3,9 +3,21 @@
   padding: 0;
 }
 
+:root {
+  --main-red-color: rgb(187, 42, 42);
+  --header-bg-color: #202125;
+  --cat-bg-color: #363740;
+  --film-bg-color: #f7f8fc;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Roboto Slab", serif;
+}
+
 .header {
   height: 7vh;
-  background-color: rgb(34, 34, 34);
+  background-color: var(--header-bg-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,7 +40,7 @@ li {
 }
 li a {
   text-decoration: none;
-  color: rgb(187, 42, 42);
+  color: var(--film-bg-color);
   font-size: 2rem;
 }
 
@@ -45,7 +57,7 @@ li a {
 }
 
 .categorias {
-  background-color: rgb(63, 63, 63);
+  background-color: var(--cat-bg-color);
   width: 13vw;
   display: flex;
   flex-direction: column;
@@ -60,6 +72,85 @@ li a {
 }
 
 .ativo {
-  color: rgb(187, 42, 42);
-  text-decoration: rgb(187, 42, 42) underline;
+  color: var(--main-red-color);
+  text-decoration: var(--main-red-color) underline;
+}
+
+.filmesContainer {
+  background-color: var(--film-bg-color);
+  height: 93vh;
+  width: 87vw;
+  display: grid;
+  overflow: scroll;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  gap: 2vw;
+  padding-left: 1vw;
+  padding-top: 1vw;
+}
+.catTitle {
+  grid-column: span 5;
+  font-size: 3rem;
+}
+
+.filmeCard {
+  width: 15vw;
+  height: 40vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.poster {
+  position: relative;
+  width: inherit;
+  height: inherit;
+}
+
+.pontuação {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-left: auto;
+  text-align: end;
+  width: 2rem;
+  height: 2rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  color: white;
+}
+
+.titulo {
+  position: absolute;
+  bottom: 0;
+  width: inherit;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+.filmesContainer::-webkit-scrollbar {
+  width: 10px;
+}
+
+.filmesContainer::-webkit-scrollbar-thumb {
+  background-color: var(--main-red-color);
+  border-radius: 10px;
+}
+
+.pBad {
+  background-color: red;
+}
+.pMedium {
+  background-color: yellow;
+  color: black;
+}
+.pGood {
+  background-color: green;
+}
+
+.hativo {
+  color: var(--main-red-color);
+  text-decoration: var(--main-red-color) underline;
 }
