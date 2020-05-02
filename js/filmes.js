@@ -1,4 +1,5 @@
 const categoryButtons = document.getElementsByClassName("categoriaButton");
+const categoriaAtiva = document.getElementById("categoriaAtiva");
 
 for (let i = 0; i < categoryButtons.length; i++) {
   categoryButtons[i].addEventListener("click", function () {
@@ -7,5 +8,7 @@ for (let i = 0; i < categoryButtons.length; i++) {
       currentButton[0].classList.remove("ativo");
     }
     this.className += " ativo";
+    categoriaAtiva.innerHTML = this.id;
+    console.log("Categoria Selecionada " + this.id);
   });
 }

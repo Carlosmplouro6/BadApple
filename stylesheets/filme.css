@@ -71,7 +71,7 @@ li a {
 }
 
 .description {
-  margin-top: -8rem;
+  margin-top: -4rem;
   font-size: 1.5rem;
 }
 
@@ -97,4 +97,12 @@ li a {
 .hativo {
   color: var(--main-red-color);
   text-decoration: var(--main-red-color) underline;
+}
+
+.star {
+  font-size: 2rem;
+}
+
+.checked {
+  color: var(--main-red-color);
 }
