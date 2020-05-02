@@ -21,6 +21,10 @@ body {
   justify-content: space-between;
 }
 
+#menuToggle input {
+  display: none;
+}
+
 .logo img {
   margin-left: 1rem;
   font-size: 40px;
@@ -115,4 +119,86 @@ li a {
 .hidden {
   opacity: 0;
   z-index: -2;
+}
+
+@media (max-width: 600px) {
+  span {
+    position: relative;
+    top: -23px;
+    right: 0px;
+    display: block;
+    width: 2.2rem;
+    height: 0.3rem;
+    margin-bottom: 6px;
+    margin-right: 6px;
+    border-radius: 3px;
+    background: rgb(230, 27, 27);
+    z-index: 1;
+    transform-origin: 0px 0px;
+    transition: transform 0.5s ease, background 0.5s ease, opacity 0.55s ease;
+  }
+  span:first-child {
+    transform-origin: 0% 0%;
+  }
+  span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+  #menuToggle input {
+    position: relative;
+    top: 12px;
+    right: 7px;
+    display: block !important;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+  }
+
+  input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: rgb(230, 27, 27);
+  }
+
+  input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  .menu {
+    position: absolute;
+    top: -16px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    transform: translate(0, -100%);
+    background-color: rgb(43, 43, 43);
+    transition: all 0.4s ease-in;
+    z-index: 0;
+    opacity: 0;
+  }
+  input:checked ~ ul {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+  ul {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .loginForm {
+    height: 70vh;
+    width: 90vw;
+  }
+  .loginForm input {
+    width: 80vw;
+    height: auto;
+    max-width: none;
+  }
 }

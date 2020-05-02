@@ -44,6 +44,10 @@ li a {
   font-size: 2rem;
 }
 
+#menuToggle input {
+  display: none;
+}
+
 .pageContainer {
   width: 100vw;
   height: 100vh;
@@ -61,6 +65,7 @@ li a {
   width: 13vw;
   display: flex;
   flex-direction: column;
+  overflow: scroll;
 }
 
 .categoriaButton {
@@ -153,4 +158,97 @@ li a {
 .hativo {
   color: var(--main-red-color);
   text-decoration: var(--main-red-color) underline;
+}
+
+@media (max-width: 600px) {
+  span {
+    position: relative;
+    top: -23px;
+    right: 0px;
+    display: block;
+    width: 2.2rem;
+    height: 0.3rem;
+    margin-bottom: 6px;
+    margin-right: 6px;
+    border-radius: 3px;
+    background: rgb(230, 27, 27);
+    z-index: 4;
+    transform-origin: 0px 0px;
+    transition: transform 0.5s ease, background 0.5s ease, opacity 0.55s ease;
+  }
+  span:first-child {
+    transform-origin: 0% 0%;
+  }
+  span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+  #menuToggle input {
+    position: relative;
+    top: 12px;
+    right: 7px;
+    display: block !important;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 5;
+  }
+
+  input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: rgb(230, 27, 27);
+  }
+
+  input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  .menu {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    transform: translate(0, -100%);
+    background-color: rgb(43, 43, 43);
+    transition: all 0.4s ease-in;
+    z-index: 3;
+    opacity: 0;
+  }
+  input:checked ~ ul {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+  ul {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .categorias {
+    width: 35vw;
+  }
+
+  .filmesContainer {
+    width: 70vw;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1vw;
+    padding-left: 0.3rem;
+  }
+
+  .catTitle {
+    grid-column: span 2;
+    font-size: 3rem;
+  }
+
+  .filmeCard {
+    width: 30vw;
+    height: 30vh;
+  }
 }
