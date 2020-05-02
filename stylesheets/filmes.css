@@ -160,7 +160,7 @@ li a {
   text-decoration: var(--main-red-color) underline;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   span {
     position: relative;
     top: -23px;
