@@ -135,11 +135,13 @@ li a {
   color: white;
 }
 
-.filmesContainer::-webkit-scrollbar {
+::-webkit-scrollbar {
+  background-color: inherit;
   width: 10px;
+  height: 0;
 }
 
-.filmesContainer::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: var(--main-red-color);
   border-radius: 10px;
 }

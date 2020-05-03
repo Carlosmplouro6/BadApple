@@ -60,6 +60,7 @@ li a {
   background-color: var(--film-bg-color);
   display: flex;
   width: 80vw;
+  height: 80vh;
 }
 
 .poster {
@@ -75,7 +76,9 @@ li a {
 }
 
 .title {
+  margin-top: -2rem;
   font-size: 4rem;
+  padding-bottom: 1rem;
 }
 
 .description {
@@ -210,7 +213,7 @@ li a {
   }
 
   .star {
-    padding: 2rem 0;
+    font-size: 1.6rem;
     margin: 0;
   }
 
@@ -218,7 +221,16 @@ li a {
     margin-top: 0;
   }
 
+  .starRating {
+    padding: 2rem 0;
+  }
+
   .rating {
+    margin-right: 2rem;
     font-size: 3rem;
+  }
+
+  .countryFlag {
+    margin-left: 2rem;
   }
 }

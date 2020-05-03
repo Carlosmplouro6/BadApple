@@ -192,6 +192,10 @@ li a {
     justify-content: space-evenly;
   }
 
+  .mainButton {
+    font-size: 4rem;
+  }
+
   .loginForm {
     height: 70vh;
     width: 90vw;
