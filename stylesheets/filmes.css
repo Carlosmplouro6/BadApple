@@ -93,8 +93,8 @@ li a {
   padding-left: 1vw;
   padding-top: 1vw;
 }
+
 .catTitle {
-  grid-column: span 5;
   font-size: 3rem;
 }
 
@@ -105,6 +105,10 @@ li a {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+.filmeCard:last-child {
+  margin-bottom: 2rem;
 }
 
 .poster {
@@ -239,7 +243,7 @@ li a {
 
   .filmesContainer {
     width: 70vw;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 1vw;
     padding-left: 0.3rem;
   }
@@ -250,7 +254,7 @@ li a {
   }
 
   .filmeCard {
-    width: 30vw;
-    height: 30vh;
+    width: 55vw;
+    height: 40vh;
   }
 }

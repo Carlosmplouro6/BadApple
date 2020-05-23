@@ -19,3 +19,25 @@ function setStars(id) {
     }
   }
 }
+
+const title = document.getElementById("title");
+const desc = document.getElementById("description");
+const rating = document.getElementById("rating");
+const ytb = document.getElementById("LinkYoutube");
+
+const url = window.location;
+const id = url.search.split("=")[1];
+const URL = `http://localhost:3000/api/filmes/${id}`;
+
+async function FetchFilme() {
+  const filmeFetch = await fetch(URL);
+  const filmejson = await filmeFetch.json();
+  console.log(filmejson);
+
+  title.innerHTML = filmejson.nome;
+  desc.innerHTML = filmejson.descricao;
+  rating.innerHTML = filmejson.media.toFixed(1);
+  ytb.href = filmejson.trailer;
+}
+
+FetchFilme();
