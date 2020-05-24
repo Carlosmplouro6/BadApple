@@ -20,6 +20,7 @@ function setStars(id) {
   }
 }
 
+const poster = document.getElementById("poster");
 const title = document.getElementById("title");
 const desc = document.getElementById("description");
 const rating = document.getElementById("rating");
@@ -34,6 +35,9 @@ async function FetchFilme() {
   const filmejson = await filmeFetch.json();
   console.log(filmejson);
 
+  const imgURL = "http://localhost:3000";
+
+  poster.src = imgURL + filmejson.poster;
   title.innerHTML = filmejson.nome;
   desc.innerHTML = filmejson.descricao;
   rating.innerHTML = filmejson.media.toFixed(1);

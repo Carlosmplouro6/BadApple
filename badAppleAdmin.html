@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bad Apple</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./stylesheets/admin.css" />
+  </head>
+  <body>
+    <section class="backgroud">
+      <header class="header">
+        <div class="logo">
+          <a href="./index.html"
+            ><img src="./imgs/Imagem2.png" alt="Logo BadApple"
+          /></a>
+        </div>
+        <nav class="navBar">
+          <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="menu">
+              <li><a href="./filmes.html">Filmes</a></li>
+              <li><a href="">Personalidades</a></li>
+              <li><a href="">Conta</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <section class="createSection">
+        <form action="" class="loginForm">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" />
+          <label for="desc">Descrição</label>
+          <input type="text" id="desc" name="desc" />
+          <label for="Trailer">Trailer</label>
+          <input type="url" id="Trailer" name="Trailer" />
+          <label for="Pais">Pais</label>
+          <input type="number" id="Pais" name="Pais" />
+          <label for="Duracao">Duração</label>
+          <input type="number" id="Duracao" name="Duracao" />
+          <label for="poster">Poster</label>
+          <input type="file" id="poster" name="poster" />
+          <input type="submit" value="Enviar" class="fButton" />
+        </form>
+      </section>
+    </section>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -37,6 +37,8 @@ async function getMoviesByGen(id) {
 
   console.log(API_CALL);
 
+  const imgURL = "http://localhost:3000";
+
   const FilmesJSon = await API_CALL.json();
 
   console.log("Categoria Selecionada " + id);
@@ -49,7 +51,7 @@ async function getMoviesByGen(id) {
   for (const filme of FilmesJSon) {
     html += `<a  href="./filme.html?id=${filme.id}">
     <section class="filmeCard">
-      <img class="poster" src="./imgs/JokerPoster.jpg" alt="" />
+      <img class="poster" src="${imgURL + filme.poster}" alt="" />
       <h3 class="pontuação ${getGradeColor(filme.media)}">
         ${filme.media.toFixed(1)}
       </h3>

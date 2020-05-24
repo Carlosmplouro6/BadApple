@@ -1,25 +1,28 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  --main-red-color: rgb(187, 42, 42);
-  --header-bg-color: #202125;
-  --cat-bg-color: #363740;
-  --film-bg-color: #f7f8fc;
-}
-
 body {
   font-family: "Roboto Slab", serif;
 }
 
+.backgroud {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url(../imgs/capa3.png);
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
+
 .header {
   height: 7vh;
-  background-color: var(--header-bg-color);
+  background-color: rgb(34, 34, 34);
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+#menuToggle input {
+  display: none;
 }
 
 .logo img {
@@ -39,87 +42,53 @@ li {
 }
 li a {
   text-decoration: none;
-  color: var(--film-bg-color);
+  color: #f7f8fc;
   font-size: 2rem;
 }
 
-#menuToggle input {
-  display: none;
+.fButton {
+  margin-top: 1rem;
+  background-color: rgb(230, 27, 27);
 }
 
-.container {
-  background-color: var(--cat-bg-color);
+.createSection {
   width: 100vw;
   height: 93vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.filmContainer {
-  background-color: var(--film-bg-color);
-  display: flex;
-  width: 80vw;
-  height: 80vh;
+.mainButton {
+  background-color: rgb(184, 21, 21);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 5rem;
+  border-radius: 60px;
+  cursor: pointer;
 }
 
-.poster {
-  width: 30vw;
-}
-
-.infoContainer {
+.loginForm {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  background-color: rgb(34, 34, 34);
+  padding: 2rem 2rem;
+  color: rgb(230, 27, 27);
   align-items: center;
-  justify-content: space-around;
-}
-
-.title {
-  margin-top: -2rem;
-  font-size: 4rem;
-  padding-bottom: 1rem;
-}
-
-.description {
-  margin-top: -4rem;
-  font-size: 1.5rem;
-}
-
-.linksContainer {
-  display: flex;
-  width: inherit;
-}
-
-.rating {
+  justify-content: space-evenly;
+  border-radius: 40px;
   font-size: 3rem;
-  margin-right: 6rem;
 }
 
-.youtubeLink {
-  width: 3rem;
-}
-
-.countryFlag {
-  margin-left: 6rem;
-  width: 5rem;
-}
-
-.hativo {
-  color: var(--main-red-color);
-  text-decoration: var(--main-red-color) underline;
-}
-
-.star {
+.loginForm input {
+  padding: 0.5rem 2rem;
+  max-width: 40vw;
+  border-radius: 40px;
+  border: 2px solid red;
   font-size: 2rem;
 }
 
-.checked {
-  color: var(--main-red-color);
-}
-
 @media (max-width: 750px) {
-  #menuToggle span {
+  span {
     position: relative;
     top: -23px;
     right: 0px;
@@ -130,7 +99,7 @@ li a {
     margin-right: 6px;
     border-radius: 3px;
     background: rgb(230, 27, 27);
-    z-index: 4;
+    z-index: 1;
     transform-origin: 0px 0px;
     transition: transform 0.5s ease, background 0.5s ease, opacity 0.55s ease;
   }
@@ -149,7 +118,7 @@ li a {
     height: 3rem;
     cursor: pointer;
     opacity: 0;
-    z-index: 5;
+    z-index: 2;
   }
 
   input:checked ~ span {
@@ -168,7 +137,7 @@ li a {
 
   .menu {
     position: absolute;
-    top: 0px;
+    top: -16px;
     left: 0;
     width: 100vw;
     height: 100vh;
@@ -176,7 +145,7 @@ li a {
     transform: translate(0, -100%);
     background-color: rgb(43, 43, 43);
     transition: all 0.4s ease-in;
-    z-index: 3;
+    z-index: 0;
     opacity: 0;
   }
   input:checked ~ ul {
@@ -187,50 +156,5 @@ li a {
   ul {
     flex-direction: column;
     justify-content: space-evenly;
-  }
-
-  .container {
-    width: 100vw;
-    height: auto;
-  }
-
-  .filmContainer {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: auto;
-  }
-  .poster {
-    width: 100vw;
-  }
-
-  .infoContainer {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .star {
-    font-size: 1.6rem;
-    margin: 0;
-  }
-
-  .description {
-    margin-top: 0;
-  }
-
-  .starRating {
-    padding: 2rem 0;
-  }
-
-  .rating {
-    margin-right: 2rem;
-    font-size: 3rem;
-  }
-
-  .countryFlag {
-    margin-left: 2rem;
   }
 }
