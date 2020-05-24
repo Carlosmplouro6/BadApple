@@ -1,0 +1,3 @@
+Heroku-----
+BD=https://elements.heroku.com/addons/cleardb / https://elements.heroku.com/addons/jawsdb
+static public= https://elements.heroku.com/addons/cloudinary
