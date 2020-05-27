@@ -7,6 +7,7 @@ body {
   left: 0;
   top: 0;
   background-image: url(../imgs/capa3.png);
+  background-size: cover;
   width: 100vw;
   height: 100vh;
   z-index: -1;
@@ -76,15 +77,15 @@ li a {
   align-items: center;
   justify-content: space-evenly;
   border-radius: 40px;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .loginForm input {
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   max-width: 40vw;
   border-radius: 40px;
   border: 2px solid red;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 @media (max-width: 750px) {

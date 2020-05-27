@@ -35,17 +35,12 @@ async function getMoviesByGen(id) {
     API_CALL = await fetch(Genero_API + `/${id}`);
   }
 
-  console.log(API_CALL);
-
   const imgURL = "http://localhost:3000";
 
   const FilmesJSon = await API_CALL.json();
 
-  console.log("Categoria Selecionada " + id);
-
   console.log(FilmesJSon);
-  console.log(FilmesJSon[0].genero);
-  let title = FilmesJSon[0].genero;
+
   let html = ``;
 
   for (const filme of FilmesJSon) {
