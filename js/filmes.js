@@ -39,8 +39,6 @@ async function getMoviesByGen(id) {
 
   const FilmesJSon = await API_CALL.json();
 
-  console.log(FilmesJSon);
-
   let html = ``;
 
   for (const filme of FilmesJSon) {
@@ -62,6 +60,9 @@ function getGradeColor(media) {
   }
   if (media < 5) {
     return "pBad";
+  }
+  if (media == 0) {
+    return "pNull";
   } else {
     return "pMedium";
   }

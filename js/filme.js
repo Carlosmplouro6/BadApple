@@ -25,6 +25,7 @@ const title = document.getElementById("title");
 const desc = document.getElementById("description");
 const rating = document.getElementById("rating");
 const ytb = document.getElementById("LinkYoutube");
+const HLink = document.getElementById("MenuLink");
 
 const url = window.location;
 const id = url.search.split("=")[1];
@@ -36,7 +37,8 @@ async function FetchFilme() {
   console.log(filmejson);
 
   const imgURL = "http://localhost:3000";
-
+  document.title = filmejson.nome;
+  HLink.innerHTML = filmejson.nome;
   poster.src = imgURL + filmejson.poster;
   title.innerHTML = filmejson.nome;
   desc.innerHTML = filmejson.descricao;

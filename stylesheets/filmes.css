@@ -71,14 +71,17 @@ li a {
 .categoriaButton {
   height: 3rem;
   margin-top: 0.5rem;
+  width: 110%;
   background-color: transparent;
   border: none;
   font-size: 2rem;
+  transition: ease-in 0.4s;
 }
 
 .ativo {
   color: var(--main-red-color);
   text-decoration: var(--main-red-color) underline;
+  transition: ease-in 0.4s;
 }
 
 .filmesContainer {
@@ -159,6 +162,10 @@ li a {
 }
 .pGood {
   background-color: green;
+}
+
+.pNull {
+  background-color: grey;
 }
 
 .hativo {
