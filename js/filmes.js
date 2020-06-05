@@ -5,7 +5,7 @@ const categoriaBay = document.getElementById("categorias");
 const Genero_API = "http://localhost:3000/api/genero";
 
 window.onload = async function getGeneros() {
-  const API_CALL = await this.fetch(Genero_API);
+  const API_CALL = await fetch(Genero_API);
   const GenerosJson = await API_CALL.json();
   let html = "";
   html += `<button class="categoriaButton ativo" id=todos>Todos</button>`;
@@ -24,7 +24,7 @@ window.onload = async function getGeneros() {
       getMoviesByGen(this.id);
     });
   }
-  this.getMoviesByGen("todos");
+  getMoviesByGen("todos");
 };
 
 async function getMoviesByGen(id) {

@@ -34,7 +34,6 @@ const URL = `http://localhost:3000/api/filmes/${id}`;
 async function FetchFilme() {
   const filmeFetch = await fetch(URL);
   const filmejson = await filmeFetch.json();
-  console.log(filmejson);
 
   const imgURL = "http://localhost:3000";
   document.title = filmejson.nome;
